@@ -6,15 +6,47 @@ class ScrollScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    const boxDecoration = BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.5, 0.5],
+            colors: [
+              Color(0xff7EEBCA),
+              Color(0xFF30BAD6)
+            ]
+          )
+        );
     return Scaffold(
-      body: Stack(
-        children: const [
-          // Background
-          Background(),
-
-          MainContent()
-        ],
+      body: Container(
+        decoration: boxDecoration,
+        child: PageView(
+          physics: const BouncingScrollPhysics(),
+          scrollDirection: Axis.vertical,
+          children: const [
+            Page1(),
+            Page2()
+          ],
+        ),
       )
+    );
+  }
+}
+
+class Page1 extends StatelessWidget {
+  const Page1({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: const [
+        // Background
+        Background(),
+
+        MainContent()
+      ],
     );
   }
 }
@@ -60,6 +92,34 @@ class Background extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: const Image(
         image: AssetImage('assets/scroll-1.png')
+      )
+    );
+  }
+}
+
+class Page2 extends StatelessWidget {
+  const Page2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: const Color(0xFF30BAD6),
+      child: Center(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: TextButton(
+            style: TextButton.styleFrom(
+              primary: Colors.white,
+              backgroundColor: const Color(0xff0098fa),
+              textStyle: const TextStyle(fontSize: 30)
+            ),
+            onPressed: () {},
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Text('Bienvenido'),
+            )
+          ),
+        ),
       )
     );
   }
