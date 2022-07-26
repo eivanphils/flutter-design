@@ -29,16 +29,19 @@ class MainContent extends StatelessWidget {
     const textStyle = TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white);
     return SafeArea(
       bottom: false,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(height: 20),
-          const Text('11°', style: textStyle,),
-          const Text('Miércoles', style: textStyle,),
-          Expanded(child: Container()),
-          const Icon(Icons.keyboard_arrow_down, size: 100, color: Colors.white,)
-        ],
+      child: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            SizedBox(height: 20),
+            Text('11°', style: textStyle,),
+            Text('Miércoles', style: textStyle,),
+            Spacer(),
+            Icon(Icons.keyboard_arrow_down, size: 100, color: Colors.white,)
+          ],
+        ),
       ),
     );
   }
