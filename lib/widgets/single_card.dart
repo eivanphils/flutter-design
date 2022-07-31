@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -17,6 +16,36 @@ class SingleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return _CardBackground(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            backgroundColor: color,
+            child: Icon(icon, color: Colors.white, size: 35),
+            radius: 30,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            title,
+            style: TextStyle(color: color, fontSize: 18),
+          )
+        ],
+      )
+    );
+  }
+}
+
+class _CardBackground extends StatelessWidget {
+  final Widget child;
+
+  const _CardBackground({
+    Key? key,
+    required this.child
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15),
       child: ClipRRect(
@@ -29,18 +58,7 @@ class SingleCard extends StatelessWidget {
               color: const Color.fromRGBO(62, 66, 107, 0.7),
             ),
             height: 180,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  backgroundColor: color,
-                  child: Icon(icon, color: Colors.white, size: 35),
-                  radius: 30,
-                ),
-                const SizedBox(height: 10),
-                Text(title, style: TextStyle(color: color, fontSize: 18),)
-              ],
-            ),
+            child: child,
           ),
         ),
       ),
