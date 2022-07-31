@@ -32,7 +32,7 @@ class _HomeBody extends StatelessWidget {
           PageTitle(),
 
           // Cards
-          // OptionCards()
+          OptionCards()
         ],
       ),
     );
