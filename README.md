@@ -19,6 +19,8 @@ Luego abre el archivo main.dart y presiona F5 o fn + F5 app. 
 
 ## Descripción
 
+La app posee 3 pantallas donde se logra aprender como crear widgets en base a una imagen dada, cada pantalla presenta un diseño más avanzado que el anterior.
+
 
 ## Paquetes de terceros
 
@@ -47,3 +49,22 @@ Luego el directorio lib
 
 
 ## Capturas de pantalla
+
+### Diseño Básico:
+
+<img src="https://github.com/eivanphils/flutter-design/blob/master/assets/Simulator%20Screen%20Shot%20-%20iPhone%2013%20mini%20-%202022-08-01%20at%2011.58.04.png" width="200">     
+
+
+### Diseño con scroll de pantalla:
+
+<img src="https://github.com/eivanphils/flutter-design/blob/master/assets/Simulator%20Screen%20Shot%20-%20iPhone%2013%20mini%20-%202022-08-01%20at%2011.58.21.png" width="200">     
+
+https://user-images.githubusercontent.com/1909869/182191028-4e498fb0-2283-48ec-872a-fbc5d9bcb00f.mp4
+
+
+### Diseño con cards, bottom navigation bar:
+
+<img src="https://github.com/eivanphils/flutter-design/blob/master/assets/Simulator%20Screen%20Shot%20-%20iPhone%2013%20mini%20-%202022-08-01%20at%2011.58.49.png" width="200">     
+
+https://user-images.githubusercontent.com/1909869/182191193-d1e49f1f-d9d8-47c6-85bd-d1ea5f41d7fd.mp4
+
