@@ -113,7 +113,7 @@ class Page2 extends StatelessWidget {
               backgroundColor: const Color(0xff0098fa),
               textStyle: const TextStyle(fontSize: 30)
             ),
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, 'home_screen'),
             child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text('Bienvenido'),

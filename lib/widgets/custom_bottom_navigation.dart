@@ -11,17 +11,28 @@ class CustomBottomNavigation extends StatelessWidget {
       selectedItemColor: Colors.pink,
       unselectedItemColor: const Color.fromRGBO(116, 117, 152, 1),
       backgroundColor: const Color.fromRGBO(55, 57, 81, 1),
-      items: const [
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.calendar_month_outlined),
+          icon: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'basic_design'),
+            child: const Icon(Icons.calendar_month_outlined)
+          ),
           label: 'Calendar',
         ),
+
         BottomNavigationBarItem(
-          icon: Icon(Icons.chat_rounded),
+          icon: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'scroll_screen'),
+            child: const Icon(Icons.chat_rounded)
+          ),
           label: 'Chart',
         ),
+
         BottomNavigationBarItem(
-          icon: Icon(Icons.usb_rounded),
+          icon: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'home_screen'),
+            child: const Icon(Icons.usb_rounded)
+          ),
           label: 'Usb',
         )
       ]
