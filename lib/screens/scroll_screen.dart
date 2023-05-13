@@ -109,7 +109,7 @@ class Page2 extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: TextButton(
             style: TextButton.styleFrom(
-              primary: Colors.white,
+              foregroundColor: Colors.white,
               backgroundColor: const Color(0xff0098fa),
               textStyle: const TextStyle(fontSize: 30)
             ),
