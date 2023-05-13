@@ -30,7 +30,7 @@ class Background extends StatelessWidget {
         Positioned(
           top: size.height * -0.10,
           left: size.width * -0.12,
-          child: _PinkBox()
+          child: const _PinkBox()
         )
       ] 
     );

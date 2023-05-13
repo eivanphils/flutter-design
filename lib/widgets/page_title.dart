@@ -9,9 +9,9 @@ class PageTitle extends StatelessWidget {
       bottom: false,
       child: Container(
         margin: const EdgeInsets.only(top: 10, left: 20, right: 20),
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text('Classify Transaction', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
             SizedBox(height: 10),
             Text(

@@ -5,9 +5,9 @@ class BasicDesignScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
-        children: const [
+        children: [
           // Image
           Image(image: AssetImage('assets/mk.jpg')),
 
@@ -49,9 +49,9 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 20),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
+        children: [
           CustomButton(icon: Icons.phone, text: 'PHONE',),
           CustomButton(icon: Icons.gps_fixed, text: 'ROUTE',),
           CustomButton(icon: Icons.share, text: 'SHARE',),
@@ -105,9 +105,9 @@ class Title extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text('Voluptate magna ullamco culpa laboris.'),
               Text(
                 'Voluptate culpa laboris.',

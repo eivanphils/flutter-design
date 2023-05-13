@@ -40,8 +40,8 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: const [
+    return const Stack(
+      children: [
         // Background
         Background(),
 
@@ -59,14 +59,14 @@ class MainContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white);
-    return SafeArea(
+    return const SafeArea(
       bottom: false,
       child: SizedBox(
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             SizedBox(height: 20),
             Text('11°', style: textStyle,),
             Text('Miércoles', style: textStyle,),
